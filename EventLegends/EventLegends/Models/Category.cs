@@ -1,15 +1,16 @@
-﻿namespace EventLegends.Models
+﻿using EventLegends.Models.Base;
+
+namespace EventLegends.Models
 {
-    public class Category
+    public class Category :  BaseEntity
     {
-        public int CategoryId { get; set; }
         public string CategoryType { get; set; }
 
 
-        //Relatie One-to-Many
-        public List<EventCategories > EventCategories { get; set; } 
+        //Relatie Many-to-Many cu Event
+        public ICollection<EventCategories > EventCategories { get; set; } 
 
-
+        /*
         public Category() {
             EventCategories = new List<EventCategories>();
         }
@@ -23,5 +24,6 @@
         {
             this.EventCategories.Add(category);
         }
+        */
     }
 }

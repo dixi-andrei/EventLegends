@@ -1,17 +1,22 @@
-﻿namespace EventLegends.Models
+﻿using EventLegends.Models.Base;
+
+namespace EventLegends.Models
 {
-    public class EventCategories
+    public class EventCategories : BaseEntity
     {
-        public int EventId { get; set; }
+        public Guid EventId { get; set; }
         public Event Event { get; set; }
 
-        public int CategoryId { get; set; }
+        public Guid CategoryId { get; set; }
         public Category Category { get; set; }  
 
+        /*
         public EventCategories() { }
-        public EventCategories(Event Event, Category Category) {
+        public EventCategories(int EventCategoriesId,Event Event, Category Category) {
+            this.EventCategoriesId = EventCategoriesId;
             this.Event = Event;
             this.Category = Category;
         }
+        */
     }
 }

@@ -1,21 +1,26 @@
-﻿namespace EventLegends.Models
+﻿
+using EventLegends.Models.Base;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace EventLegends.Models
 {
-    public class Ticket
+    public class Ticket : BaseEntity
     {
-        public int TicketId { get; set; }
         public int TicketPrice { get; set; }
 
-        //Relatie Many-to-One
-        public int EventId { get; set; }
-        public Event Event { get; set; }
+        //Relatie Many-to-Many cu event
+     
+        public ICollection<EventTickets> EventTickets { get; set; }
 
-        //Relatie One-to-One
+       //relatie many-to-one
         public EventParticipant EventParticipant { get; set; }
+        public Guid EventParticipantId { get;  set; }
 
         //Relatie One-to-Many
-        public List<Order> Orders { get; set; }
-
-        public Ticket()
+        public ICollection<Order> Orders { get; set; }
+        
+        /*
+        public Ticket() 
         {
             Orders = new List<Order>();
         }
@@ -31,5 +36,6 @@
         public void AddOrders(Order order) { 
             Orders.Add(order);
         }
+        */
     }
  } 

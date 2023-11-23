@@ -1,32 +1,40 @@
-﻿namespace EventLegends.Models
+﻿using EventLegends.Models.Base;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace EventLegends.Models
 {
-    public class Event
+    public class Event : BaseEntity
     {
-        public int EventId { get; set; }
         public string EventName { get; set; } 
         public DateTime EventTime { get; set; }
 
         // Relație Many-to-One cu Organizer
-        public int OrganizerId { get; set; }    
+        public Guid OrganizerId { get; set; }    
         public Organizer Organizer { get; set; }
 
         //Relatie One-to-Many 
-        public List<Review> Reviews { get; set; }   
+        public ICollection<Review> Reviews { get; set; }   
 
         //Relatie Many-to-Many cu Category
-        public List<EventCategories> EventCategories { get; set; }
+        public ICollection<EventCategories> EventCategories { get; set; }
+        //relatie Many-to-many cu eventparticipants
+        public ICollection<EventParticipants> EventParticipants { get; set; }
 
         //Reltie One-to-One
         public Venue Venue { get; set; }
 
-        //Relatie One-to-Many
-        public List<Ticket> Tickets { get; set; }
+        //Relatie Many-to-Many cu Ticket
+        public ICollection<EventTickets> EventTickets { get; set; }
 
+
+        /*
         public Event()
         {
             Reviews = new List<Review>();
             EventCategories = new List<EventCategories>();
-            Tickets = new List<Ticket>();
+            EventParticipants = new List<EventParticipant>();
+            
         }
 
         public Event(string EventName, DateTime DateTime, Organizer Organizer) : this()
@@ -46,9 +54,15 @@
             EventCategories.Add(category);
         }
 
+        public void AddEventParticipant(EventParticipant participant)
+        {
+            EventParticipants.Add(participant);
+        }
+        
         public void AddTicket(Ticket ticket)
         {
             Tickets.Add(ticket);
         }
+        */
     }
 }

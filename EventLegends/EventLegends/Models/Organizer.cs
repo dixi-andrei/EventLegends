@@ -1,23 +1,25 @@
-﻿namespace EventLegends.Models
+﻿using EventLegends.Models.Base;
+
+namespace EventLegends.Models
 {
-    public class Organizer
+    public class Organizer : BaseEntity
     {
-        public string OrganizerId { get; set; }
 
         // Relație One-to-Many cu Event
-        public List<Event> Events { get; set; }
-
+        public ICollection<Event> Events { get; set; }
+        /*
         public Organizer() { 
             Events = new List<Event> { };
         }
 
-        public Organizer(string organizerId) : this()
+        public Organizer(int organizerId) : this()
         {
-            OrganizerId = organizerId;
+            this.OrganizerId = organizerId;
         }
 
         public void AddEvents(Event Event) { 
             Events.Add(Event);
         }
+        */
     }
 }

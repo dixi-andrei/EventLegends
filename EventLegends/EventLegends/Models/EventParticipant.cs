@@ -1,28 +1,40 @@
-﻿namespace EventLegends.Models
-{
-    public class EventParticipant
-    {
-        public int EventParticipantId { get; set; }
+﻿using EventLegends.Models.Base;
+using System.ComponentModel.DataAnnotations.Schema;
 
+namespace EventLegends.Models
+{
+    public class EventParticipant : BaseEntity
+    {
         //Relatie Many-to-One
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
         public User User { get; set; }
 
-        //Relatie Many-to-One
-        public int EventId { get; set; }
-        public Event Event { get; set; }
+        //Relatie Many-to-Many cu event
+      
+        public ICollection<EventParticipants> EventParticipants { get; set; }
 
-        //Relatie One-to-One
-        public Ticket Ticket { get; set; }
+        
+        //relatie one-to-many cu tickets
+        public ICollection<Ticket> Tickets { get; set; }
 
-        public EventParticipant() { }
+        /*
+        public EventParticipant() { 
+          //  Tickets = new List<Ticket>();
 
-        public EventParticipant(int eventParticipantId, User user,Event Event, Ticket ticket)
-        {
-            EventParticipantId = eventParticipantId;
-            User = user;
-            Event = Event;
-            Ticket = ticket;
         }
+
+        public EventParticipant(int eventParticipantId, User user,Event Event) : this()
+        {
+            this.EventParticipantId = eventParticipantId;
+            this.User = user;
+            Event = Event;
+           
+        }
+        
+        public void AddTicket(Ticket ticket)
+        {
+            Tickets.Add(ticket);
+        }
+        */
     }
 }

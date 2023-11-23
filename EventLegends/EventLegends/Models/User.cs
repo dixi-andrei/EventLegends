@@ -1,17 +1,18 @@
-﻿namespace EventLegends.Models
+﻿using EventLegends.Models.Base;
+
+namespace EventLegends.Models
 {
-    public class User
+    public class User : BaseEntity
     {
-        public int UserId { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
 
         //Relatie One-to-Many
-        public List<EventParticipant> EventParticipants { get; set; } 
+        public ICollection<EventParticipant> EventParticipants { get; set; } 
 
         //Relatie One-to-Many
-        public List<Notification> Notifications { get; set; }
-
+        public ICollection<Notification> Notifications { get; set; }
+        /*
         public User()
         {
             Notifications = new List<Notification>();
@@ -33,6 +34,6 @@
         {
             this.EventParticipants.Add(EventParticipant);
         }
-
+        */
     }
 }
