@@ -17,4 +17,20 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Helpers\Seeders\" />
+    <Folder Include="Services\CategoryService\" />
+    <Folder Include="Services\EventService\" />
+    <Folder Include="Services\EventParticipantService\" />
+    <Folder Include="Services\EventParticipantsService\" />
+    <Folder Include="Services\EventTicketsService\" />
+    <Folder Include="Services\VenueService\" />
+    <Folder Include="Services\UserService\" />
+    <Folder Include="Services\TicketService\" />
+    <Folder Include="Services\ReviewService\" />
+    <Folder Include="Services\OrganizerService\" />
+    <Folder Include="Services\OrderService\" />
+    <Folder Include="Services\NotificationService\" />
+  </ItemGroup>
+
 </Project>

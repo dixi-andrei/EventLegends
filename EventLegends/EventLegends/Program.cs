@@ -1,4 +1,5 @@
 using EventLegends.Data;
+using EventLegends.Helpers.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+builder.Services.AddRepositories();
+builder.Services.AddServices();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
