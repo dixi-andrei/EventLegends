@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
@@ -19,18 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Helpers\Seeders\" />
-    <Folder Include="Services\CategoryService\" />
-    <Folder Include="Services\EventService\" />
-    <Folder Include="Services\EventParticipantService\" />
-    <Folder Include="Services\EventParticipantsService\" />
-    <Folder Include="Services\EventTicketsService\" />
-    <Folder Include="Services\VenueService\" />
-    <Folder Include="Services\UserService\" />
-    <Folder Include="Services\TicketService\" />
-    <Folder Include="Services\ReviewService\" />
-    <Folder Include="Services\OrganizerService\" />
-    <Folder Include="Services\OrderService\" />
-    <Folder Include="Services\NotificationService\" />
   </ItemGroup>
 
 </Project>

@@ -16,7 +16,7 @@ namespace EventLegends.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<Organizer> Organizers { get; set; }
         public DbSet<Review> Reviews { get; set; }
-        //public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Venue> Venues { get; set; }
         public DbSet<EventTickets> EventTickets {get; set; }

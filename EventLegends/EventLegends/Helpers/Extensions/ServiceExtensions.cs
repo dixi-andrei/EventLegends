@@ -159,13 +159,14 @@ namespace EventLegends.Helpers.Extensions
             services.AddTransient<ITicketService, TicketService>();
             return services;
         }
-
+        
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
             services.AddTransient<IUserRepository, UserRepository>();
 
             return services;
         }
+       
 
         public static IServiceCollection AddServices(this IServiceCollection services)
         {

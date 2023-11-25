@@ -7,7 +7,7 @@ namespace EventLegends.Services.CategoryService
         Task<List<CategoryDto>> GetAllCategories();
         Task<CategoryDto> GetCategoryById(Guid categoryId);
         Task CreateCategory(CategoryDto categoryDto);
-        Task UpdateCategory(CategoryDto categoryDto);
+        Task UpdateCategory(Guid categoryId, CategoryDto categoryDto);
         Task DeleteCategory(Guid categoryId);
     }
 }

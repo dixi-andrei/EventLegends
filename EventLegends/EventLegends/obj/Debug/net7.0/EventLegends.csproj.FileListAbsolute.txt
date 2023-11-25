@@ -74,3 +74,5 @@ C:\Users\Dixi\Desktop\EventLegends\EventLegends\EventLegends\obj\Debug\net7.0\re
 C:\Users\Dixi\Desktop\EventLegends\EventLegends\EventLegends\obj\Debug\net7.0\EventLegends.pdb
 C:\Users\Dixi\Desktop\EventLegends\EventLegends\EventLegends\obj\Debug\net7.0\EventLegends.genruntimeconfig.cache
 C:\Users\Dixi\Desktop\EventLegends\EventLegends\EventLegends\obj\Debug\net7.0\ref\EventLegends.dll
+C:\Users\Dixi\Desktop\EventLegends\EventLegends\EventLegends\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\Dixi\Desktop\EventLegends\EventLegends\EventLegends\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
