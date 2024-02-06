@@ -3403,19 +3403,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\I5G10\\.nuget\\packages\\": {}
+    "C:\\Users\\Dixi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyDoc\\Desktop\\EventLegends2\\EventLegends\\EventLegends\\EventLegends\\EventLegends.csproj",
+      "projectUniqueName": "C:\\Users\\Dixi\\Desktop\\EventLegends\\EventLegends\\EventLegends\\EventLegends.csproj",
       "projectName": "EventLegends",
-      "projectPath": "D:\\MyDoc\\Desktop\\EventLegends2\\EventLegends\\EventLegends\\EventLegends\\EventLegends.csproj",
-      "packagesPath": "C:\\Users\\I5G10\\.nuget\\packages\\",
-      "outputPath": "D:\\MyDoc\\Desktop\\EventLegends2\\EventLegends\\EventLegends\\EventLegends\\obj\\",
+      "projectPath": "C:\\Users\\Dixi\\Desktop\\EventLegends\\EventLegends\\EventLegends\\EventLegends.csproj",
+      "packagesPath": "C:\\Users\\Dixi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dixi\\Desktop\\EventLegends\\EventLegends\\EventLegends\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\I5G10\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dixi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3487,7 +3487,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
