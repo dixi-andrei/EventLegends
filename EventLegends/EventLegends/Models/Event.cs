@@ -9,6 +9,9 @@ namespace EventLegends.Models
         public string EventName { get; set; } 
         public DateTime EventTime { get; set; }
 
+        public Guid RatingId { get; set; }
+        public Rating Rating { get; set; }
+
         // Relație Many-to-One cu Organizer
         public Guid OrganizerId { get; set; }    
         public Organizer Organizer { get; set; }

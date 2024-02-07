@@ -1,4 +1,5 @@
 ﻿using EventLegends.Models;
+using EventLegends.Models.Base;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventLegends.Data
@@ -20,7 +21,17 @@ namespace EventLegends.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Venue> Venues { get; set; }
         public DbSet<EventTickets> EventTickets {get; set; }
-        public DbSet<EventParticipants> EParticipants {  get; set; }  
+        public DbSet<EventParticipants> EParticipants {  get; set; }
+
+        public DbSet<Sponsor> Sponsors { get; set; }
+
+        public DbSet<EventSponsor> EventSponsors { get; set; }
+
+        public DbSet<Tag>Tags { get; set; }
+
+        public DbSet<Rating> Ratings { get; set; }
+        public DbSet<Media> Media { get; set; }
+
         public object UpdateBehavior { get; private set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

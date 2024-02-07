@@ -3,11 +3,15 @@ using EventLegends.Repositories.EventCategoriesRepository;
 using EventLegends.Repositories.EventParticipantRepository;
 using EventLegends.Repositories.EventParticipantsRepository;
 using EventLegends.Repositories.EventRepository;
+using EventLegends.Repositories.EventSponsorRepository;
 using EventLegends.Repositories.EventTicketsRepository;
 using EventLegends.Repositories.NotificationRepository;
 using EventLegends.Repositories.OrderRepository;
 using EventLegends.Repositories.OrganizerRepository;
+using EventLegends.Repositories.RatingRepository;
 using EventLegends.Repositories.ReviewRepository;
+using EventLegends.Repositories.SponsorRepository;
+using EventLegends.Repositories.TagRepository;
 using EventLegends.Repositories.TicketRepository;
 using EventLegends.Repositories.UserRepository;
 using EventLegends.Repositories.VenueRepository;
@@ -16,11 +20,16 @@ using EventLegends.Services.EventCategoriesService;
 using EventLegends.Services.EventParticipantService;
 using EventLegends.Services.EventParticipantsService;
 using EventLegends.Services.EventService;
+using EventLegends.Services.EventSponsorService;
 using EventLegends.Services.EventTicketsService;
 using EventLegends.Services.NotificationService;
 using EventLegends.Services.OrderService;
 using EventLegends.Services.OrganizerService;
+using EventLegends.Services.RatingService;
 using EventLegends.Services.ReviewService;
+using EventLegends.Services.SponsorService;
+using EventLegends.Services.TagService;
+using EventLegends.Services.TagsService;
 using EventLegends.Services.TicketService;
 using EventLegends.Services.UserService;
 using EventLegends.Services.VenueService;
@@ -184,6 +193,64 @@ namespace EventLegends.Helpers.Extensions
         public static IServiceCollection AddVenueServices(this IServiceCollection services)
         {
             services.AddTransient<IVenueService, VenueService>();
+            return services;
+        }
+        public static IServiceCollection AddSponsorRepositories(this IServiceCollection services)
+        {
+            services.AddTransient<ISponsorRepository, SponsorRepository>();
+            return services;
+        }
+
+        public static IServiceCollection AddSponsorServices(this IServiceCollection services)
+        {
+            services.AddTransient<ISponsorService, SponsorService>();
+            return services;
+        }
+
+        public static IServiceCollection AddEventSponsorRepositories(this IServiceCollection services)
+        {
+            services.AddTransient<IEventSponsorRepository, EventSponsorRepository>();
+            return services;
+        }
+
+        public static IServiceCollection AddEventSponsorServices(this IServiceCollection services)
+        {
+            services.AddTransient<IEventSponsorService, EventSponsorService>();
+            return services;
+        }
+
+        public static IServiceCollection AddTagRepositories(this IServiceCollection services)
+        {
+            services.AddTransient<ITagRepository, TagRepository>();
+            return services;
+        }
+
+        public static IServiceCollection AddTagServices(this IServiceCollection services)
+        {
+            services.AddTransient<ITagService, TagService>();
+            return services;
+        }
+
+        public static IServiceCollection AddRatingRepositories(this IServiceCollection services)
+        {
+            services.AddTransient<IRatingRepository, RatingRepository>();
+            return services;
+        }
+
+        public static IServiceCollection AddRatingServices(this IServiceCollection services)
+        {
+            services.AddTransient<IRatingService, RatingService>();
+            return services;
+        }
+        public static IServiceCollection AddRatingRepositories(this IServiceCollection services)
+        {
+            services.AddTransient<IRatingRepository, RatingRepository>();
+            return services;
+        }
+
+        public static IServiceCollection AddRatingServices(this IServiceCollection services)
+        {
+            services.AddTransient<IRatingService, RatingService>();
             return services;
         }
 

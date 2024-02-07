@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using EventLegends.Models.DTOs;
 using EventLegends.Models;
+using EventLegends.Models.Base;
 
 namespace EventLegends.Helpers
 {
@@ -44,6 +45,41 @@ namespace EventLegends.Helpers
             CreateMap<Venue, VenueDto>();
             CreateMap<VenueDto, Venue>();
 
+            CreateMap<Sponsor, SponsorDTO>();
+            CreateMap<SponsorDTO, Sponsor>();
+
+            CreateMap<EventSponsor, EventSponsorDto>();
+            CreateMap<EventSponsorDto, EventSponsor>();
+
+            CreateMap<Tag, TagDTO>();
+            CreateMap<TagDTO, Tag>();
+
+            CreateMap<Rating, RatingDto>();
+            CreateMap<RatingDto, Rating>();
+
+            CreateMap<Venue, VenueDto>();
+            CreateMap<VenueDto, Venue>();
+
+            CreateMap<Category, CategoryDto>();
+            CreateMap<CategoryDto, Category>();
+
+            CreateMap<Category, CategoryDto>();
+            CreateMap<CategoryDto, Category>();
+
+            CreateMap<Sponsor, SponsorDTO>();
+            CreateMap<SponsorDTO, Sponsor>();
+
+            CreateMap<EventSponsor, EventSponsorDto>();
+            CreateMap<EventSponsorDto, EventSponsor>();
+
+            CreateMap<Tag, TagDTO>();
+            CreateMap<TagDTO, Tag>();
+
+            CreateMap<Media, MediaDto>();
+            CreateMap<MediaDto, Media>();
+
+            CreateMap<Rating, RatingDto>();
+            CreateMap<RatingDto, Rating>();
         }
     }
 }

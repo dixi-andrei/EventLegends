@@ -7,6 +7,9 @@ namespace EventLegends.Models
         public string Username { get; set; }
         public string Email { get; set; }
 
+        public Guid RatingId { get; set; }
+        public Rating Rating { get; set; }
+
         //Relatie One-to-Many
         public ICollection<EventParticipant> EventParticipants { get; set; } 
 
